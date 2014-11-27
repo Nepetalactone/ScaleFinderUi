@@ -1,0 +1,28 @@
+﻿<Window x:Class="ScaleFinderUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="320" VerticalAlignment="Top" Width="517" Grid.RowSpan="2">
+            <Label Content="Key:" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.496,-0.409"/>
+            <ComboBox HorizontalAlignment="Left" Margin="30,3,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Scale:" HorizontalAlignment="Center" Margin="0,0,150,0" VerticalAlignment="Top"/>
+            <ComboBox HorizontalAlignment="Center" Margin="8,3,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Scale:" HorizontalAlignment="Right" Margin="0,3,150,0" VerticalAlignment="Top"/>
+            <Label Content="Label" HorizontalAlignment="Right" Margin="0,3,120,0" VerticalAlignment="Top"/>
+            <Grid HorizontalAlignment="Left" Height="286" Margin="0,34,0,0" VerticalAlignment="Top" Width="517">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="8*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Content="Chord" HorizontalAlignment="Left" Margin="0,3,0,0" VerticalAlignment="Top"/>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="37,3,0,0" VerticalAlignment="Top"/>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="70,3,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+        </Grid.RowDefinitions>
+    </Grid>
+</Window>

@@ -1,0 +1,3 @@
+[submodule "ScaleFinder"]
+	path = ScaleFinder
+	url = https://github.com/Nepetalactone/ScaleFinder.git
