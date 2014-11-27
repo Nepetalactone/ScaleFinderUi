@@ -46,27 +46,38 @@ namespace ScaleFinderUI
 
         private void KeyBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if ((this.ScaleBox.SelectedValue != null) && (this.KeyBox.SelectedValue != null))
+            {
+                UpdateChords();
+            }
         }
 
         private void ScaleBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (this.ScaleBox.SelectedValue != null)
+            if ((this.ScaleBox.SelectedValue != null) && (this.KeyBox.SelectedValue != null))
             {
-                this.ScaleLabel.Content = "";
-                StringBuilder builder = new StringBuilder();
-                foreach (String note in _controller.GetScaleNotes(this.ScaleBox.SelectedValue.ToString(), this.KeyBox.SelectedValue.ToString()))
-                {
-                    if (builder.Length != 0)
-                    {
-                        builder.Append(", " + note);
-                    }
-                    else
-                    {
-                        builder.Append(note);
-                    }
-                }
-                this.ScaleLabel.Content = builder.ToString();
+                UpdateChords();
             }
+        }
+
+        private void UpdateChords()
+        {
+            this.ScaleLabel.Content = "";
+            StringBuilder builder = new StringBuilder();
+            foreach (
+                String note in
+                    _controller.GetScaleNotes(this.ScaleBox.SelectedValue.ToString(), this.KeyBox.SelectedValue.ToString()))
+            {
+                if (builder.Length != 0)
+                {
+                    builder.Append(", " + note);
+                }
+                else
+                {
+                    builder.Append(note);
+                }
+            }
+            this.ScaleLabel.Content = builder.ToString();
         }
     }
 }
