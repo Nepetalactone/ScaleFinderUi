@@ -21,11 +21,52 @@ namespace ScaleFinderUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly ScaleFinderController controller;
+        private readonly ScaleFinderController _controller;
         public MainWindow()
         {
-            controller = new ScaleFinderController();
+            _controller = new ScaleFinderController();
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (String note in _controller.GetNotes())
+            {
+                this.KeyBox.Items.Add(note);
+            }
+
+            foreach (String scale in _controller.GetScaleNames())
+            {
+                this.ScaleBox.Items.Add(scale);
+            }
+
+            this.KeyBox.SelectedValue = this.KeyBox.Items[0];
+            this.ScaleBox.SelectedValue = this.ScaleBox.Items[0];
+        }
+
+        private void KeyBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+        }
+
+        private void ScaleBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (this.ScaleBox.SelectedValue != null)
+            {
+                this.ScaleLabel.Content = "";
+                StringBuilder builder = new StringBuilder();
+                foreach (String note in _controller.GetScaleNotes(this.ScaleBox.SelectedValue.ToString(), this.KeyBox.SelectedValue.ToString()))
+                {
+                    if (builder.Length != 0)
+                    {
+                        builder.Append(", " + note);
+                    }
+                    else
+                    {
+                        builder.Append(note);
+                    }
+                }
+                this.ScaleLabel.Content = builder.ToString();
+            }
         }
     }
 }
