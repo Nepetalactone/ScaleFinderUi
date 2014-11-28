@@ -18,6 +18,29 @@
                 <Label Content="Chord" HorizontalAlignment="Left" Margin="0,3,0,0" VerticalAlignment="Top"/>
                 <Label Name="ChordNameLabel"  Content="Label" HorizontalAlignment="Left" Margin="37,3,0,0" VerticalAlignment="Top"/>
                 <Label Name="ChordLabel" Content="Label" HorizontalAlignment="Left" Margin="70,3,0,0" VerticalAlignment="Top"/>
+                <Grid HorizontalAlignment="Left" Height="252" Margin="0,2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="517">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="8*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Content="I" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
+                    <Label Content="ii" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
+                    <Label Content="iii" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
+                    <Label Content="IV" Grid.Column="3" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
+                    <Label Content="V" Grid.Column="4" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
+                    <Label Content="vi" Grid.Column="5" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
+                    <Label Content="vii" Grid.Column="6" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
+                    <StackPanel Name="StackPanelI" HorizontalAlignment="Left" Height="224" Grid.Row="1" VerticalAlignment="Top" Width="74" RenderTransformOrigin="-0.245,-0.29"/>
+                </Grid>
             </Grid>
         </Grid>
         <Grid.RowDefinitions>

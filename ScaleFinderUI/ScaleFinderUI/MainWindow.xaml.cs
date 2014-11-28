@@ -49,6 +49,7 @@ namespace ScaleFinderUI
             if ((this.ScaleBox.SelectedValue != null) && (this.KeyBox.SelectedValue != null))
             {
                 UpdateChords();
+                FillStackPanel();
             }
         }
 
@@ -57,6 +58,7 @@ namespace ScaleFinderUI
             if ((this.ScaleBox.SelectedValue != null) && (this.KeyBox.SelectedValue != null))
             {
                 UpdateChords();
+                FillStackPanel();
             }
         }
 
@@ -78,6 +80,17 @@ namespace ScaleFinderUI
                 }
             }
             this.ScaleLabel.Content = builder.ToString();
+        }
+
+        private void FillStackPanel()
+        {
+            StackPanelI.Children.Clear();
+            foreach (String chord in _controller.GetPossibleChordsInScale(this.ScaleBox.SelectedValue.ToString(), this.KeyBox.SelectedValue.ToString()))
+            {
+                Button temp = new Button();
+                temp.Content = chord;
+                this.StackPanelI.Children.Add(temp);
+            }
         }
     }
 }
