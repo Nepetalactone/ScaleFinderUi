@@ -84,12 +84,23 @@ namespace ScaleFinderUI
 
         private void FillStackPanel()
         {
-            StackPanelI.Children.Clear();
-            foreach (Tuple<string, string> chord in _controller.GetPossibleChordsInScale(this.ScaleBox.SelectedValue.ToString(), this.KeyBox.SelectedValue.ToString()))
+            StackPanel[] chordPanels = new StackPanel[]{ChordPanel1, ChordPanel2, ChordPanel3, ChordPanel4, ChordPanel5, ChordPanel6, ChordPanel7};
+
+            foreach (StackPanel panel in chordPanels)
             {
-                Button temp = new Button();
-                temp.Content = chord.Item1 + chord.Item2;
-                this.StackPanelI.Children.Add(temp);
+                panel.Children.Clear();
+            }
+
+            int i = 0;
+            foreach (List<String> chords in _controller.GetPossibleChordsInScale(this.ScaleBox.SelectedValue.ToString(), this.KeyBox.SelectedValue.ToString()))
+            {
+                foreach (String chordName in chords)
+                {
+                    Button temp = new Button();
+                    temp.Content = chordName;
+                    chordPanels[i].Children.Add(temp);
+                }
+                i++;
             }
         }
     }

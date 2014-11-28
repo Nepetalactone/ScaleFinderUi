@@ -39,7 +39,13 @@
                     <Label Content="V" Grid.Column="4" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
                     <Label Content="vi" Grid.Column="5" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
                     <Label Content="vii" Grid.Column="6" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
-                    <StackPanel Name="StackPanelI" HorizontalAlignment="Left" Height="224" Grid.Row="1" VerticalAlignment="Top" Width="74" RenderTransformOrigin="-0.245,-0.29"/>
+                    <StackPanel Name="ChordPanel1" HorizontalAlignment="Left" Height="224" Grid.Row="1" VerticalAlignment="Top" Width="74" RenderTransformOrigin="-0.245,-0.29"/>
+                    <StackPanel Name="ChordPanel2"  Grid.Column="1" HorizontalAlignment="Left" Height="224" Grid.Row="1" VerticalAlignment="Top" Width="74" RenderTransformOrigin="-0.02,0.51"/>
+                    <StackPanel Name="ChordPanel3"  Grid.Column="2" HorizontalAlignment="Left" Height="224" VerticalAlignment="Top" Width="74" Grid.Row="1"/>
+                    <StackPanel Name="ChordPanel4" Grid.Column="3" HorizontalAlignment="Left" Height="224" Grid.Row="1" VerticalAlignment="Top" Width="74"/>
+                    <StackPanel Name="ChordPanel5"  Grid.Column="4" HorizontalAlignment="Left" Height="224" Grid.Row="1" VerticalAlignment="Top" Width="74"/>
+                    <StackPanel Name="ChordPanel6"  Grid.Column="5" HorizontalAlignment="Left" Height="224" Grid.Row="1" VerticalAlignment="Top" Width="74"/>
+                    <StackPanel Name="ChordPanel7"  Grid.Column="6" HorizontalAlignment="Left" Height="225" Margin="0,27,0,0" VerticalAlignment="Top" Width="73" Grid.RowSpan="2"/>
                 </Grid>
             </Grid>
         </Grid>
