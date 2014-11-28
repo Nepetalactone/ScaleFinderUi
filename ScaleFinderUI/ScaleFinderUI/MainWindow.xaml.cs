@@ -85,10 +85,10 @@ namespace ScaleFinderUI
         private void FillStackPanel()
         {
             StackPanelI.Children.Clear();
-            foreach (String chord in _controller.GetPossibleChordsInScale(this.ScaleBox.SelectedValue.ToString(), this.KeyBox.SelectedValue.ToString()))
+            foreach (Tuple<string, string> chord in _controller.GetPossibleChordsInScale(this.ScaleBox.SelectedValue.ToString(), this.KeyBox.SelectedValue.ToString()))
             {
                 Button temp = new Button();
-                temp.Content = chord;
+                temp.Content = chord.Item1 + chord.Item2;
                 this.StackPanelI.Children.Add(temp);
             }
         }
