@@ -64,7 +64,7 @@ namespace ScaleFinderUI
 
         private void UpdateChords()
         {
-            this.ScaleLabel.Content = "";
+            this.ScaleLabel.Content = "Scale: ";
             StringBuilder builder = new StringBuilder();
             foreach (
                 String note in
@@ -79,12 +79,12 @@ namespace ScaleFinderUI
                     builder.Append(note);
                 }
             }
-            this.ScaleLabel.Content = builder.ToString();
+            this.ScaleLabel.Content += builder.ToString();
         }
 
         private void FillStackPanel()
         {
-            StackPanel[] chordPanels = new StackPanel[]{ChordPanel1, ChordPanel2, ChordPanel3, ChordPanel4, ChordPanel5, ChordPanel6, ChordPanel7};
+            StackPanel[] chordPanels = {ChordPanel1, ChordPanel2, ChordPanel3, ChordPanel4, ChordPanel5, ChordPanel6, ChordPanel7};
 
             foreach (StackPanel panel in chordPanels)
             {
@@ -98,10 +98,42 @@ namespace ScaleFinderUI
                 {
                     Button temp = new Button();
                     temp.Content = chordName;
+                    temp.Click += On_ChordButton_Click;
                     chordPanels[i].Children.Add(temp);
                 }
                 i++;
             }
+        }
+
+        private void On_ChordButton_Click(object sender, EventArgs e)
+        {
+            Button senderButton = sender as Button;
+
+            String chordAndKey = senderButton.Content.ToString();
+            String key;
+            String chord;
+
+            this.ChordLabel.Content = "Chord " + chordAndKey + ": ";
+
+            if (chordAndKey[1].Equals('#'))
+            {
+                key = chordAndKey[0] + "Sharp";
+                chord = chordAndKey.Substring(2);
+            }
+            else
+            {
+                key = chordAndKey[0].ToString();
+                chord = chordAndKey.Substring(1);
+            }
+
+            StringBuilder notes = new StringBuilder();
+
+            foreach (String note in _controller.GetChordNotes(key, chord))
+            {
+                notes.Append(note + ", ");
+            }
+
+            this.ChordLabel.Content += notes.ToString(0, notes.Length - 2);
         }
     }
 }
