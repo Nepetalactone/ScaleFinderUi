@@ -84,7 +84,7 @@ namespace ScaleFinderUI
 
         private void FillStackPanel()
         {
-            StackPanel[] chordPanels = {ChordPanel1, ChordPanel2, ChordPanel3, ChordPanel4, ChordPanel5, ChordPanel6, ChordPanel7, ChordPanel8};
+            StackPanel[] chordPanels = {ChordPanel1, ChordPanel2, ChordPanel3, ChordPanel4, ChordPanel5, ChordPanel6, ChordPanel7};
 
             foreach (StackPanel panel in chordPanels)
             {

@@ -24,7 +24,6 @@
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                         <ColumnDefinition Width="1*"></ColumnDefinition>
-                        <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"></RowDefinition>
@@ -37,7 +36,6 @@
                     <Label Content="V"      Grid.Column="4" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
                     <Label Content="vi"     Grid.Column="5" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
                     <Label Content="vii"    Grid.Column="6" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
-                    <Label Content="viii"   Grid.Column="7" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
                     <StackPanel Name="ChordPanel1"  Grid.Column="0" HorizontalAlignment="Left" Height="225" Grid.Row="1" VerticalAlignment="Top" Width="74"/>
                     <StackPanel Name="ChordPanel2"  Grid.Column="1" HorizontalAlignment="Left" Height="225" Grid.Row="1" VerticalAlignment="Top" Width="77"/>
                     <StackPanel Name="ChordPanel3"  Grid.Column="2" HorizontalAlignment="Left" Height="225" Grid.Row="1" VerticalAlignment="Top" Width="77"/>
@@ -45,7 +43,6 @@
                     <StackPanel Name="ChordPanel5"  Grid.Column="4" HorizontalAlignment="Left" Height="225" Grid.Row="1" VerticalAlignment="Top" Width="77"/>
                     <StackPanel Name="ChordPanel6"  Grid.Column="5" HorizontalAlignment="Left" Height="225" Grid.Row="1" VerticalAlignment="Top" Width="77"/>
                     <StackPanel Name="ChordPanel7"  Grid.Column="6" HorizontalAlignment="Left" Height="225" Grid.Row="1" VerticalAlignment="Top" Width="77"/>
-                    <StackPanel Name="ChordPanel8"  Grid.Column="7" HorizontalAlignment="Left" Height="225" Grid.Row="1" VerticalAlignment="Top" Width="77"/>
                 </Grid>
             </Grid>
         </Grid>
