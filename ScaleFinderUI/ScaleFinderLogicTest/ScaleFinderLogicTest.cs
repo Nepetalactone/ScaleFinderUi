@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ScaleFinderConsole;
+using ScaleFinderUI.Logic;
 
 namespace ScaleFinderLogicTest
 {
     [TestClass]
-    public class UnitTest1
+    public class ScaleFinderLogicTest
     {
         private ScaleFinderController _scaleFinderController;
 

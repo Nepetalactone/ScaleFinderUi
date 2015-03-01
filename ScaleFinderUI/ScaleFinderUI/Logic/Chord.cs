@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ScaleFinderConsole
+namespace ScaleFinderUI.Logic
 {
     class Chord : NoteSet
     {
