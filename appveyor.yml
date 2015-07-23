@@ -1,8 +1,6 @@
-build_script:
-  - ScaleFinderUI\ScaleFinderUI.sln
-  
 build:
   verbosity: detailed
+  project: ScaleFinderUI\ScaleFinderUI.sln
   
 configuration: Release
 
