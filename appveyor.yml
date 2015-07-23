@@ -19,4 +19,4 @@ artifacts:
   - path: ScaleFinderUI.exe
 test:
   assemblies:
-    - ScaleFinderUI\ScaleFinderUI\ScaleFinderLogicTest\bin\Release\ScaleFinderLogicTest.dll
+    - ScaleFinderUI\ScaleFinderLogicTest\bin\Release\ScaleFinderLogicTest.dll
