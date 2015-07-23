@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ScaleFinderUI.Logic;
 
-namespace ScaleFinderLogicTest
+namespace ScaleFinderTest
 {
     [TestClass]
     public class ScaleFinderLogicTest
@@ -84,6 +84,26 @@ namespace ScaleFinderLogicTest
                     {
                         Assert.Fail();
                     }
+                }
+            }
+        }
+
+        [TestMethod]
+        public void GetScaleNotes()
+        {
+            String[] testNotes = { "A", "B", "C#", "D", "E", "F#", "G#" };
+            var notes = _scaleFinderController.GetScaleNotes("Ionian", "A");
+
+            if (testNotes.Length != notes.Length)
+            {
+                Assert.Fail();
+            }
+
+            for (int i = 0; i < testNotes.Length; i++)
+            {
+                if (testNotes[i] != notes[i])
+                {
+                    Assert.Fail();
                 }
             }
         }

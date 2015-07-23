@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ScaleFinderUI.Logic
 {
@@ -53,7 +49,7 @@ namespace ScaleFinderUI.Logic
                 case Note.GSharp:
                     return "G#";
                 default:
-                    return "ERROR";
+                    throw new Exception();
             }
         }
     }

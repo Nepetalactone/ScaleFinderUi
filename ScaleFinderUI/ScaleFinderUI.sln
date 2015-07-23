@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaleFinderUI", "ScaleFinderUI\ScaleFinderUI.csproj", "{6F978864-C07F-4578-B264-4A12735BC057}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaleFinderLogicTest", "ScaleFinderLogicTest\ScaleFinderLogicTest.csproj", "{6201BA66-A2CC-4E3C-BC23-74AE4B42EC47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaleFinderLogic", "ScaleFinderLogicTest\ScaleFinderLogic.csproj", "{6201BA66-A2CC-4E3C-BC23-74AE4B42EC47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

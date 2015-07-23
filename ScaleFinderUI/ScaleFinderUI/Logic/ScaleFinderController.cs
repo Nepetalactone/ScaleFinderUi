@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ScaleFinderUI.Logic
 {
@@ -14,7 +12,7 @@ namespace ScaleFinderUI.Logic
 
         public ScaleFinderController()
         {
-            _scales = new Scale[]{
+            _scales = new []{
                 new Scale("101011010101", "Major"),
                 new Scale("101101011010", "Natural Minor"),
                 new Scale("101101011001", "Harmonic Minor"),
@@ -63,7 +61,7 @@ namespace ScaleFinderUI.Logic
                 new Scale("101001010110", "Dominant 7th")
             };
 
-            _chords = new Chord[]{
+            _chords = new []{
                 new Chord("10001001", "Major", "maj"),
                 new Chord("10010001", "Minor", "min"),
                 new Chord("100010001", "Augmented", "aug"),
@@ -86,16 +84,13 @@ namespace ScaleFinderUI.Logic
                 new Chord("10000100101", "Seventh Suspended Fourth Augmented Fifth", "7sus4#5")
             };
 
-            Array.Sort(_scales, (x, y) => string.Compare(x.Name, y.Name));
+            Array.Sort(_scales, (x, y) => string.Compare(x.Name, y.Name, CultureInfo.CurrentCulture, CompareOptions.None));
         }
 
         public String[] GetScaleNames()
         {
             List<String> scaleNameList = new List<string>();
-            foreach (Scale scale in _scales)
-            {
-                scaleNameList.Add(scale.Name);
-            }
+            scaleNameList.AddRange(_scales.Select(x => x.Name));
             return scaleNameList.ToArray();
         }
 
@@ -153,22 +148,15 @@ namespace ScaleFinderUI.Logic
                 select tempChord).FirstOrDefault();
 
             chord.Key = (Note) Enum.Parse(typeof (Note), keyString);
-            foreach (Note note in chord.Notes)
-            {
-                noteList.Add(note.ToStringManual());
-            }
+            noteList.AddRange(chord.Notes.ConvertAll(n => n.ToStringManual()));
 
             return noteList.ToArray();
         }
 
         public String[] GetNotes()
         {
-            List<String> noteList = new List<string>();
-            foreach (Note note in Enum.GetValues(typeof (Note)))
-            {
-                noteList.Add(note.ToStringManual());
-            }
-            return noteList.ToArray();
+            return (from Note note in Enum.GetValues(typeof (Note))
+                select note.ToStringManual()).ToArray();
         }
 
         public String[] GetScaleNotes(String scaleName, String keyString)
@@ -181,11 +169,8 @@ namespace ScaleFinderUI.Logic
                 select tempScale).FirstOrDefault();
 
             scale.Key = (Note)Enum.Parse(typeof (Note), keyString);
+            noteList.AddRange(scale.Notes.ConvertAll(n => n.ToStringManual()));
 
-            foreach (Note note in scale.Notes)
-            {
-                noteList.Add(note.ToStringManual());
-            }
             return noteList.ToArray();
         }
     }

@@ -6,7 +6,7 @@
     <ProjectGuid>{6201BA66-A2CC-4E3C-BC23-74AE4B42EC47}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ScaleFinderLogicTest</RootNamespace>
+    <RootNamespace>ScaleFinderTest</RootNamespace>
     <AssemblyName>ScaleFinderLogicTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -52,6 +53,7 @@
   <ItemGroup>
     <Compile Include="ScaleFinderLogicTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NoteTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ScaleFinderUI\ScaleFinderUI.csproj">

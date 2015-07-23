@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ScaleFinderUI.Logic
 {
@@ -40,13 +37,8 @@ namespace ScaleFinderUI.Logic
             {
                 if (c.Equals('1'))
                 {
-                    Note x;
-                    Enum.TryParse(i.ToString(), out x);
-                    notes.Add(x);
+                    notes.Add((Note)Enum.Parse(typeof(Note), i.ToString()));
                 }
-                else if (c.Equals('0'))
-                { }
-
                 i++;
 
                 if (i > 11)
@@ -54,7 +46,6 @@ namespace ScaleFinderUI.Logic
                     i = 0;
                 }
             }
-
             return notes;
         }
     }

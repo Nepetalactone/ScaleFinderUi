@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ScaleFinderUI.Logic
 {
@@ -13,15 +10,7 @@ namespace ScaleFinderUI.Logic
         }
         public bool IsChordInScale(Chord chord)
         {
-            foreach (Note note in chord.Notes)
-            {
-                if (!Notes.Contains(note))
-                {
-                    return false;
-                }
-            }
-
-            return true;
+            return chord.Notes.All(x => Notes.Contains(x));
         }
     }
 }
