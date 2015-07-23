@@ -16,7 +16,7 @@ deploy:
   on:
     branch: master
 artifacts: 
-  - path: ScaleFinderUI.exe
+  - path: ScaleFinderUI\ScaleFinderUI\bin\Release\ScaleFinderUI.exe
 test:
   assemblies:
     - ScaleFinderUI\ScaleFinderLogicTest\bin\Release\ScaleFinderLogicTest.dll
