@@ -20,3 +20,4 @@ artifacts:
 test:
   assemblies:
     - ScaleFinderUI\ScaleFinderLogicTest\bin\Release\ScaleFinderLogicTest.dll
+skip_tags: true
