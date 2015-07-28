@@ -12,7 +12,7 @@ deploy:
   draft: false
   prerelease: false
   on:
-    branch: master
+    branch: release
 artifacts: 
   - path: ScaleFinderUI\ScaleFinderUI\bin\Release\ScaleFinderUI.exe
 test:
