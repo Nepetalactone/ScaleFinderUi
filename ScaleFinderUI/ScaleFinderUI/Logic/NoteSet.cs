@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace ScaleFinderUI.Logic
 {
@@ -37,7 +38,7 @@ namespace ScaleFinderUI.Logic
             {
                 if (c.Equals('1'))
                 {
-                    notes.Add((Note)Enum.Parse(typeof(Note), i.ToString()));
+                    notes.Add((Note)Enum.Parse(typeof(Note), i.ToString(CultureInfo.CurrentCulture)));
                 }
                 i++;
 

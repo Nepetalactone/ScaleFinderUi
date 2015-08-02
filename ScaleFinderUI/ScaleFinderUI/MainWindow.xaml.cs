@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -87,8 +88,10 @@ namespace ScaleFinderUI
             {
                 foreach (String chordName in chords)
                 {
-                    Button temp = new Button();
-                    temp.Content = chordName;
+                    Button temp = new Button
+                    {
+                        Content = chordName,
+                    };
                     temp.Click += On_ChordButton_Click;
                     chordPanels[i].Children.Add(temp);
                 }
@@ -118,7 +121,7 @@ namespace ScaleFinderUI
             }
             else
             {
-                key = chordAndKey[0].ToString();
+                key = chordAndKey[0].ToString(CultureInfo.CurrentCulture);
                 chord = chordAndKey.Substring(1);
             }
 
